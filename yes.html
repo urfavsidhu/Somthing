@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I also like you ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+<style>
+body{
+  background: linear-gradient(180deg,#ff6b81,#ffd166);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+h1{
+  font-size: 56px;
+  animation: pop 1s ease forwards;
+}
+@keyframes pop {
+  0%{transform: scale(0);}
+  80%{transform: scale(1.1);}
+  100%{transform: scale(1);}
+}
+.heart{
+  position: absolute;
+  font-size: 24px;
+  animation: float 5s linear infinite;
+}
+@keyframes float {
+  from{transform: translateY(0); opacity:1;}
+  to{transform: translateY(-800px); opacity:0;}
+}
+</style>
+</head>
+<body>
+  <h1>I Love  You 2 ❤️</h1>
+  <h4>Mai koi shayar to nahi but kuch likha hai tumhare liye <h4>
+    <p>💕</p>
+  <p>Pata nahi kab shuru hua,
+par tumse baat karte hue hamesha ek alag sa sukoon milta hai.
+Tumhari baatein simple hoti hain,
+par unmein ek ajeeb sa charm hota hai, jo dil ko khinch leta hai.
+
+Kabhi sochta hoon, ye sab sirf ek coincidence hai,
+par har baar tumse baat karke lagta hai, nahi — kuch toh khaas baat hai.
+
+Main yeh nahi keh raha ki mujhe pyaar ho gaya hai,
+bas itna keh raha hoon — tum pasand ho… wo bhi dil se, bina kisi reason ke.
+
+Tumhari muskaan, tumhara andaaz, aur wo chhoti chhoti baatein —
+sab milke ek aisi feeling dete hain, jo shayad shabdon me likh nahi sakta.
+
+Bas itna samajh lo…
+tum pasand ho, aur yeh pasand kisi logic se nahi — bas dil se hai. 💕</p>
+  
+
+<script>
+function createHeart(){
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.innerText = ['❤️','💖','💕','💘','💞'][Math.floor(Math.random()*5)];
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animationDuration = (3 + Math.random()*3) + 's';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),5000);
+}
+setInterval(createHeart,200);
+</script>
+</body>
+</html>
